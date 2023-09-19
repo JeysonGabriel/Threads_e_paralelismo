@@ -3,9 +3,9 @@
 #include <vector>
 #include <chrono>
 
-// Tirei o locale pra português porque por alguma razão não tava pegando na minha máquina - Romulo
+// Tirei o locale pra portuguÃªs porque por alguma razÃ£o nÃ£o tava pegando na minha mÃ¡quina - Romulo
 
-// Função para realizar o bubblesort em uma função só da array
+// FunÃ§Ã£o para realizar o bubblesort em uma funÃ§Ã£o sÃ³ da array
 void bubbleSort(std::vector<int>& arr, int start, int end) {
     for (int i = start; i < end; i++) {
         for (int j = start; j < end - 1; j++) {
@@ -16,7 +16,7 @@ void bubbleSort(std::vector<int>& arr, int start, int end) {
     }
 }
 
-// Função para juntar as duas metades do array
+// FunÃ§Ã£o para juntar as duas metades do array
 void merge(std::vector<int>& arr, int start, int mid, int end) {
     std::vector<int> temp(end - start + 1);
     int i = start, j = mid + 1, k = 0;
@@ -48,14 +48,14 @@ int main() {
     const int size = 20000;
     std::vector<int> arr(size);
 
-    // Inicializando no pior caso possível para o bubblesort
+    // Inicializando no pior caso possÃ­vel para o bubblesort
     for (int i = 0; i < size; i++) {
         arr[i] = size - i;
     }
     /*
-    Procura o meio certinho e então separa cada metade em duas threads diferentes, bem simples!
+    Procura o meio certinho e entÃ£o separa cada metade em duas threads diferentes, bem simples!
     Tem um outro esquema pra separar dados certinhos pra cada thread feito no de matriz
-    Mas bubblesort é um bagulho tão besta que eu fiz assim, com 2 threads ele já mostra diferença massiva
+    Mas bubblesort Ã© um bagulho tÃ£o besta que eu fiz assim, com 2 threads ele jÃ¡ mostra diferenÃ§a massiva
     */
     int mid = size / 2;
 
